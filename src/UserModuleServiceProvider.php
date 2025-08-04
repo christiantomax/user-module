@@ -11,7 +11,6 @@ class UserModuleServiceProvider extends ServiceProvider
         // Load core package functionality
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'user-module');
 
         // Config auto merge (optional, works without publish)
         $this->mergeConfigFrom(__DIR__.'/config/filament-shield.php', 'filament-shield');
@@ -29,11 +28,6 @@ class UserModuleServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/routes' => base_path('routes/vendor/user-module'),
         ], 'user-module-routes');
-
-        // Publish views
-        $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/user-module'),
-        ], 'user-module-views');
 
         // Publish migrations
         $this->publishes([
