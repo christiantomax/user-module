@@ -31,7 +31,7 @@ class UserModuleServiceProvider extends ServiceProvider
 
         // Publish migrations
         $this->publishes([
-            __DIR__.'/database' => database_path('database'),
+            __DIR__.'/database' => database_path(),
         ], 'user-module-database');
         
         // php artisan vendor:publish --tag="filament-shield-config"
