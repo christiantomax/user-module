@@ -1,0 +1,32 @@
+{
+    "name": "christiantomax/user-module",
+    "description": "Reusable User Management Module with Roles & Permissions",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Christiantomax\\UserModule\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^3.0",
+        "spatie/laravel-permission": "^6.0",
+        "bezhansalleh/filament-shield": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Maximillian Christianto",
+            "email": "christiantomaximillian@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Christiantomax\\UserModule\\UserModuleServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
