@@ -14,13 +14,7 @@ class UserModuleServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/views', 'user-module');
 
         // Config auto merge (optional, works without publish)
-        $this->mergeConfigFrom(__DIR__.'/config/user-module.php', 'user-module');
         $this->mergeConfigFrom(__DIR__.'/config/filament-shield.php', 'filament-shield');
-
-        // Publish config files
-        $this->publishes([
-            __DIR__.'/config/user-module.php' => config_path('user-module.php'),
-        ], 'user-module-config');
 
         $this->publishes([
             __DIR__.'/config/filament-shield.php' => config_path('filament-shield.php'),
