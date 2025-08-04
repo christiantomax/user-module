@@ -17,11 +17,6 @@ class UserModuleServiceProvider extends ServiceProvider
         // Views (optional)
         $this->loadViewsFrom(__DIR__.'/resources/views', 'user-module');
 
-        // Config
-        $this->publishes([
-            __DIR__.'/config/user-module.php' => config_path('user-module.php'),
-        ], 'user-module-config');
-
         $this->publishes([
             __DIR__.'/config/filament-shield.php' => config_path('filament-shield.php'),
         ], 'filament-shield-config');
@@ -30,11 +25,6 @@ class UserModuleServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/config/filament-shield.php',
             'filament-shield'
-        );
-
-        $this->mergeConfigFrom(
-            __DIR__.'/config/user-module.php',
-            'user-module'
         );
         
         // php artisan vendor:publish --tag="filament-shield-config"
